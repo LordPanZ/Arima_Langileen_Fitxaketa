@@ -1,0 +1,248 @@
+{
+  "common": {
+    "loading": "Kargatzen…",
+    "demoTag": "DEMO",
+    "ongoing": "Abian",
+    "duration": "{{sign}}{{hours}} h {{minutes}} min",
+    "error": "Errorea",
+    "backHome": "Hasierara itzuli",
+    "cancel": "Utzi",
+    "phase2": "2. fasean erabilgarri"
+  },
+  "language": {
+    "label": "Hizkuntza",
+    "short": { "es": "ES", "eu": "EU" },
+    "long": { "es": "Gaztelania", "eu": "Euskara" }
+  },
+  "banner": {
+    "demo": "Erakustaldi modua: datu fiktizioak",
+    "emulators": "Emulagailu lokalak",
+    "firebase": "1. fasea (probak)",
+    "notLegal": "Erregistroek ez dute balio legalik"
+  },
+  "roles": {
+    "employee": "Langilea",
+    "coordinator": "Koordinazioa",
+    "admin": "Administrazioa",
+    "auditor": "Auditoretza",
+    "none": "Rolik gabe"
+  },
+  "nav": {
+    "label": "Nabigazio nagusia",
+    "home": "Hasiera",
+    "clock": "Fitxatu",
+    "history": "Historia",
+    "events": "Ekitaldiak",
+    "correction": "Zuzenketa eskatu",
+    "adminHome": "Panela",
+    "employees": "Langileak",
+    "adminEvents": "Ekitaldiak",
+    "incidents": "Gorabeherak",
+    "goAdmin": "Kudeaketa panelera joan →",
+    "goWorker": "← Nire fitxaketara itzuli"
+  },
+  "auth": {
+    "signOut": "Irten",
+    "errors": {
+      "invalid-credentials": "Helbide elektronikoa edo pasahitza ez da zuzena.",
+      "too-many-requests": "Saiakera gehiegi. Itxaron pixka bat eta saiatu berriro.",
+      "network": "Konexio-errorea. Egiaztatu Interneteko konexioa.",
+      "unknown": "Ezin izan da saioa hasi."
+    }
+  },
+  "login": {
+    "subtitle": "Arima Cool Tour-en lanaldi-erregistroa",
+    "title": "Hasi saioa",
+    "demoTitle": "Erakustaldi modua",
+    "demoHelp": "Aukeratu profil fiktizio bat aplikazioa probatzeko. Ez da pasahitzik behar, eta ez da ezer gordetzen.",
+    "demoAs": "Sartu profil honekin: {{role}}",
+    "emulatorHint": "Emulagailu lokalak: erabili «npm run emulators:seed» komandoarekin sortutako kontu fiktizioak.",
+    "email": "Helbide elektronikoa",
+    "password": "Pasahitza",
+    "submit": "Sartu",
+    "individualAccounts": "Pertsona bakoitzak bere kontua du. Ez partekatu zure pasahitza.",
+    "privacy": "Ez da GPS kokapenik erabiltzen, eta ez dago etengabeko jarraipenik."
+  },
+  "noRole": {
+    "title": "Zure kontuak ez du rolik esleituta",
+    "body": "Jarri harremanetan administrazioarekin sarbidea aktibatzeko."
+  },
+  "forbidden": {
+    "title": "Ez duzu sarbiderik",
+    "body": "Ez duzu orri hau ikusteko baimenik."
+  },
+  "notFound": { "title": "Ez da orria aurkitu" },
+  "dashboard": {
+    "greeting": "Kaixo, {{name}}",
+    "statusTitle": "Uneko egoera",
+    "goClock": "Fitxatu",
+    "week": "Azken 7 egunak",
+    "issues": "Berrikusteko",
+    "upcoming": "Hurrengo ekitaldiak",
+    "allEvents": "Ikusi nire ekitaldi guztiak"
+  },
+  "clock": {
+    "title": "Fitxatu",
+    "simulationTitle": "SIMULAZIOA — ez da ordurik erregistratzen",
+    "simulationBody": "1. fasea: botoiek aurreikusitako fluxua erakusten dute soilik. Ez da ezer bidaltzen edo gordetzen, eta ez du balio legalik. Benetako fitxaketa 2. fasean aktibatuko da, zerbitzariaren orduarekin.",
+    "simulationShort": "Simulazioa",
+    "timeSourceServer": "Zerbitzariaren ordua (Europe/Madrid)",
+    "timeSourceDevice": "Gailuaren ordua (erakustaldia; benetako fitxaketek zerbitzariaren ordua erabiliko dute)",
+    "currentStatus": "Egoera",
+    "status": {
+      "off": "Lanaldiz kanpo",
+      "working": "Lanean",
+      "on-break": "Atsedenaldian"
+    },
+    "eventLabel": "Ekitaldia (aukerakoa)",
+    "noEvent": "Ekitaldirik gabe",
+    "noEventHelp": "Ekitaldirik esleituta ez baduzu ere, fitxa dezakezu.",
+    "actions": {
+      "clock-in": "Sarrera",
+      "clock-out": "Irteera",
+      "break-start": "Hasi atsedenaldia",
+      "break-end": "Amaitu atsedenaldia"
+    },
+    "simulatedDone": "Simulatua: {{action}}. Ez da ezer erregistratu.",
+    "invalidTransition": "Ekintza hori ez dago baimenduta uneko egoeran.",
+    "simulatedLog": "Simulazioaren erregistroa (gailu honetan soilik)",
+    "deviceTime": "gailua",
+    "resetSimulation": "Berrabiarazi simulazioa",
+    "confirmTitle": "«{{action}}» simulatu nahi duzu?",
+    "confirmBody": "Simulazio bat da hau. Ez da ordurik bidaliko ez erregistratuko.",
+    "confirmSimulate": "Simulatu"
+  },
+  "history": {
+    "title": "Historia",
+    "subtitle": "Zure lanaldiak (Europe/Madrid ordua)",
+    "empty": "Ez dago erregistrorik.",
+    "noEvent": "Ekitaldirik gabe",
+    "breaks": "Atsedenaldiak",
+    "corrected": "Zuzendua",
+    "anomalies": {
+      "missing-clock-out": "Irteera falta da",
+      "break-not-closed": "Atsedenaldia ez da itxi",
+      "orphan-punch": "Marka solte bat",
+      "non-monotonic-time": "Ordena okerreko ordua"
+    },
+    "requestCorrection": "Zuzenketa eskatu",
+    "myCorrections": "Nire zuzenketa-eskaerak"
+  },
+  "correction": {
+    "title": "Zuzenketa eskatu",
+    "subtitle": "Jatorrizko erregistroa ez da inoiz aldatzen: zuzenketa ere erregistratuta geratzen da.",
+    "notSent": "1. fasea: inprimakia egiaztatu egiten da, baina EZ da bidaltzen.",
+    "kindLabel": "Zer zuzendu behar da?",
+    "kinds": {
+      "add-missing": "Marka bat falta da",
+      "adjust-time": "Marka baten ordua ez da zuzena",
+      "void-entry": "Marka bat ez zen egin behar"
+    },
+    "punchLabel": "Marka mota",
+    "date": "Data",
+    "time": "Ordua",
+    "timezoneHelp": "Idatzi penintsulako ordu ofiziala (Europe/Madrid ordu-zona).",
+    "reason": "Arrazoia",
+    "submit": "Egiaztatu eskaera",
+    "originalKept": "Administrazioak berrikusiko du. Jatorrizko marka eta zuzenketa, biak gordeko dira.",
+    "simulatedSent": "Inprimakia zuzena da. 1. fasean ez da bidaltzen.",
+    "status": {
+      "pending": "Zain",
+      "approved": "Onartua",
+      "rejected": "Baztertua",
+      "withdrawn": "Atzera bota da"
+    },
+    "errors": {
+      "nonexistent": "Ordu hori ez da existitzen (ordu-aldaketa).",
+      "ambiguous": "Ordu hori bi aldiz gertatzen da (ordu-aldaketa). Adierazi arrazoian.",
+      "time": "Idatzi baliozko ordu bat.",
+      "generic": "Berrikusi datuak.",
+      "reason": "Arrazoiak gutxienez {{min}} karaktere izan behar ditu."
+    }
+  },
+  "events": {
+    "none": "Ez duzu ekitaldirik esleituta.",
+    "mineTitle": "Nire ekitaldiak",
+    "mineSubtitle": "Esleitutako ekitaldiak eta jarduerak",
+    "task": "Zeregina",
+    "status": {
+      "draft": "Zirriborroa",
+      "scheduled": "Programatua",
+      "in-progress": "Abian",
+      "finished": "Amaitua",
+      "cancelled": "Bertan behera"
+    },
+    "assignment": {
+      "assigned": "Esleitua",
+      "confirmed": "Berretsia",
+      "declined": "Ukatua",
+      "cancelled": "Bertan behera"
+    }
+  },
+  "admin": {
+    "title": "Kudeaketa panela",
+    "subtitle": "Laburpen orokorra",
+    "stats": {
+      "employees": "Langile aktiboak",
+      "events": "Hurrengo ekitaldiak",
+      "incidents": "Gorabehera irekiak",
+      "corrections": "Zain dauden zuzenketak"
+    },
+    "rulesTitle": "Lanaldi-arauak",
+    "rulesHelp_one": "Abisu {{count}} datu fiktizioetan. Arauak lege-berrikuspenaren zain daude: abisuak dira, ez zehapenak.",
+    "rulesHelp_other": "{{count}} abisu datu fiktizioetan. Arauak lege-berrikuspenaren zain daude: abisuak dira, ez zehapenak.",
+    "rulesEditPhase2": "Arauak 2. fasean editatu ahal izango dira, auditoriarekin."
+  },
+  "rules": {
+    "codes": {
+      "MAX_DAILY_ORDINARY_HOURS": "Eguneko ohiko orduen gehienekoa",
+      "MIN_REST_BETWEEN_WORKDAYS": "Lanaldien arteko gutxieneko atsedena",
+      "BREAK_AFTER_CONTINUOUS_WORK": "Lanaldi jarraituko atsedenaldia",
+      "MIN_WEEKLY_REST": "Asteko gutxieneko atsedena",
+      "MAX_WEEKLY_AVERAGE_HOURS": "Asteko batez besteko orduen gehienekoa"
+    },
+    "status": {
+      "draft": "Zirriborroa",
+      "pending-legal-review": "Lege-berrikuspenaren zain",
+      "active": "Aktiboa",
+      "retired": "Kendua"
+    },
+    "findings": {
+      "maxDaily": "{{minutes}} min lan egin dira (muga: {{limit}} min)",
+      "minRest": "{{minutes}} min atseden (gutxienekoa: {{limit}} min)",
+      "breakMissing": "{{minutes}} min jarraian atsedenaldirik gabe (muga: {{limit}} min)"
+    }
+  },
+  "employees": {
+    "title": "Langileak",
+    "subtitle": "Plantilla (datu fiktizioak)",
+    "add": "Gehitu pertsona",
+    "status": { "active": "Aktiboa", "inactive": "Ez aktiboa" },
+    "privacyNote": "Garapenean ez da benetako daturik erabiltzen. 1. fasean ez da NANik ez helbiderik gordetzen."
+  },
+  "adminEvents": {
+    "title": "Ekitaldien kudeaketa",
+    "subtitle": "Ekitaldiak eta esleipenak",
+    "add": "Sortu ekitaldia",
+    "staff_one": "Pertsona {{count}} esleituta",
+    "staff_other": "{{count}} pertsona esleituta"
+  },
+  "incidents": {
+    "title": "Gorabeherak",
+    "subtitle": "Pertsona batek berrikusteko abisuak",
+    "empty": "Ez dago gorabeherarik.",
+    "types": {
+      "missing-clock-out": "Irteera fitxatu gabe",
+      "rest-period-not-met": "Atsedena ez da bete",
+      "max-daily-hours-exceeded": "Eguneko orduak gaindituta",
+      "break-not-taken": "Atsedenaldirik gabe",
+      "clock-in-without-assignment": "Esleipenik gabeko fitxaketa",
+      "clock-device-time-skew": "Gailuaren ordua desdoitua",
+      "correction-requested": "Zuzenketa eskatua",
+      "other": "Bestelakoa"
+    },
+    "severity": { "info": "Informazioa", "warning": "Abisua", "critical": "Larria" },
+    "status": { "open": "Irekia", "acknowledged": "Ikusia", "resolved": "Konponduta" },
+    "noAutoSanction": "Gorabeherek ez dute fitxaketarik blokeatzen, ezta zehapen automatikorik sortzen ere: pertsona batek berrikusi behar ditu."
+  }
+}

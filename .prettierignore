@@ -1,0 +1,11 @@
+node_modules
+functions/node_modules
+dist
+dev-dist
+functions/lib
+coverage
+playwright-report
+test-results
+package-lock.json
+functions/package-lock.json
+emulator-seed

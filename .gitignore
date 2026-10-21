@@ -1,0 +1,42 @@
+# Dependencias
+node_modules/
+functions/node_modules/
+
+# Builds
+dist/
+dev-dist/
+functions/lib/
+*.tsbuildinfo
+
+# Entorno local (NUNCA subir secretos)
+.env
+.env.local
+.env.*.local
+functions/.env
+functions/.env.*
+!functions/.env.example
+.runtimeconfig.json
+service-account*.json
+*-firebase-adminsdk-*.json
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log
+pubsub-debug.log
+emulator-seed/
+
+# Pruebas
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
