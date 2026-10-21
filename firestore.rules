@@ -1,0 +1,121 @@
+rules_version = '2';
+
+// ARIMA FICHA — reglas de Firestore (fase 1)
+//
+// Principios:
+//  1. Denegado por defecto: todo lo no listado aquí está prohibido.
+//  2. El cliente NO escribe registros legales (timeEntries, breakEntries,
+//     timeCorrections), ni auditoría, ni incidencias, ni empleados, ni roles.
+//     Esas escrituras solo las hace Cloud Functions con Admin SDK (que no
+//     pasa por estas reglas) tras validar identidad, rol y datos.
+//  3. Identidad y rol salen del token (custom claims "role" y "employeeId"),
+//     que solo puede asignar el backend.
+//  4. Cada trabajador solo lee lo suyo.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Funciones auxiliares ──────────────────────────────────────────────
+    function signedIn() {
+      return request.auth != null;
+    }
+    function role() {
+      return request.auth.token.role;
+    }
+    function hasRole() {
+      return signedIn()
+        && request.auth.token.role is string
+        && request.auth.token.role in ['employee', 'coordinator', 'admin', 'auditor']
+        && request.auth.token.employeeId is string;
+    }
+    function isRole(roles) {
+      return hasRole() && role() in roles;
+    }
+    function myEmployeeId() {
+      return request.auth.token.employeeId;
+    }
+    function ownsResource() {
+      return hasRole() && resource.data.employeeId == myEmployeeId();
+    }
+
+    // ── Empleados ─────────────────────────────────────────────────────────
+    match /employees/{employeeId} {
+      allow read: if (hasRole() && employeeId == myEmployeeId())
+                  || isRole(['coordinator', 'admin', 'auditor']);
+      allow write: if false; // solo backend
+    }
+
+    match /employmentContracts/{contractId} {
+      allow read: if ownsResource() || isRole(['admin', 'auditor']);
+      allow write: if false;
+    }
+
+    match /workSchedules/{scheduleId} {
+      allow read: if ownsResource() || isRole(['coordinator', 'admin', 'auditor']);
+      allow write: if false;
+    }
+
+    // ── Eventos ───────────────────────────────────────────────────────────
+    match /events/{eventId} {
+      // El trabajador solo ve eventos a los que está asignado. El ID de la
+      // asignación es determinista: {eventId}__{employeeId}.
+      allow read: if isRole(['coordinator', 'admin', 'auditor'])
+                  || (hasRole() && exists(/databases/$(database)/documents/eventAssignments/$(eventId + '__' + myEmployeeId())));
+      allow write: if false; // fase 2: vía Cloud Functions (auditado)
+    }
+
+    match /eventAssignments/{assignmentId} {
+      allow read: if ownsResource() || isRole(['coordinator', 'admin', 'auditor']);
+      allow write: if false;
+    }
+
+    // ── Registros legales (append-only, solo backend) ─────────────────────
+    match /timeEntries/{entryId} {
+      allow read: if ownsResource() || isRole(['admin', 'auditor']);
+      allow write: if false;
+    }
+
+    match /breakEntries/{entryId} {
+      allow read: if ownsResource() || isRole(['admin', 'auditor']);
+      allow write: if false;
+    }
+
+    match /timeCorrections/{correctionId} {
+      allow read: if ownsResource() || isRole(['admin', 'auditor']);
+      allow write: if false; // solicitud y revisión vía Cloud Functions
+    }
+
+    // ── Incidencias ───────────────────────────────────────────────────────
+    match /incidents/{incidentId} {
+      allow read: if ownsResource() || isRole(['coordinator', 'admin', 'auditor']);
+      allow write: if false;
+    }
+
+    // ── Auditoría ─────────────────────────────────────────────────────────
+    match /auditEvents/{auditId} {
+      allow read: if isRole(['admin', 'auditor']);
+      allow write: if false;
+    }
+
+    // ── Configuración ─────────────────────────────────────────────────────
+    match /laborRules/{ruleId} {
+      allow read: if hasRole();
+      allow write: if false; // cambios auditados vía Cloud Functions
+    }
+
+    // ── Preferencias del usuario (única escritura directa permitida) ──────
+    match /userPreferences/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow create, update: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['locale', 'updatedAt'])
+        && request.resource.data.locale in ['es', 'eu']
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
+
+    // ── Todo lo demás: denegado ───────────────────────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_comment": "Itzulpen hauek hizkuntza-berrikuspena behar dute (euskaldun natibo batek eta, ahal bada, enpresako terminologiaz arduratzen denak). / Traducciones que requieren revisión lingüística.",
+  "roles.coordinator": "«Koordinazioa» (funtzioa) vs «Koordinatzailea» (pertsona). Gaztelaniaz «Coordinación» erabili da.",
+  "roles.auditor": "«Auditoretza» (funtzioa) vs «Auditorea»/«Ikuskatzailea» (pertsona). Lan Ikuskaritzarekin nahasterik ez sortzeko egiaztatu.",
+  "nav.history": "«Historia» vs «Historiala» vs «Erregistroa».",
+  "nav.incidents": "«Gorabeherak» (incidencias). Egiaztatu enpresan erabiltzen den terminoa.",
+  "events.mineTitle": "«Ekitaldiak» (eventos) turismo-jardueretarako egokia den: «Jarduerak» aukera ere badago.",
+  "clock.status.on-break": "«Atsedenaldian» vs «Etenaldian» (pausa).",
+  "clock.actions.break-start": "«Hasi atsedenaldia» (agintera) vs «Atsedenaldiaren hasiera» (izena).",
+  "clock.actions.break-end": "«Amaitu atsedenaldia» vs «Atsedenaldiaren amaiera».",
+  "history.anomalies.orphan-punch": "«Marka solte bat»: termino teknikoa, argiagoa izan daiteke.",
+  "correction.status.withdrawn": "«Atzera bota da» (retirada por la persona solicitante).",
+  "correction.timezoneHelp": "«Penintsulako ordu ofiziala»: egiaztatu formulazioa.",
+  "rules.codes.BREAK_AFTER_CONTINUOUS_WORK": "Lan-zuzenbideko terminologia (ET 34.4): «lanaldi jarraitua».",
+  "rules.status.retired": "«Kendua» vs «Erretiratua» vs «Indarrik gabe».",
+  "incidents.types.clock-device-time-skew": "«Desdoitua» vs «desfasatua».",
+  "incidents.status.acknowledged": "«Ikusia» vs «Jasoa».",
+  "adminEvents.staff_one": "Pluralak: «Pertsona 1 esleituta».",
+  "admin.rulesHelp_one": "Pluralak: «Abisu 1».",
+  "banner.notLegal": "Lege-testuen terminologia: «balio legala» vs «baliozkotasun juridikoa»."
+}

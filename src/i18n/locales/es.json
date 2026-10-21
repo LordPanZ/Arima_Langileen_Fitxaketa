@@ -1,0 +1,248 @@
+{
+  "common": {
+    "loading": "Cargando…",
+    "demoTag": "DEMO",
+    "ongoing": "En curso",
+    "duration": "{{sign}}{{hours}} h {{minutes}} min",
+    "error": "Error",
+    "backHome": "Volver al inicio",
+    "cancel": "Cancelar",
+    "phase2": "Disponible en la fase 2"
+  },
+  "language": {
+    "label": "Idioma",
+    "short": { "es": "ES", "eu": "EU" },
+    "long": { "es": "Castellano", "eu": "Euskera" }
+  },
+  "banner": {
+    "demo": "Modo demostración: datos ficticios",
+    "emulators": "Emuladores locales",
+    "firebase": "Fase 1 (pruebas)",
+    "notLegal": "Ningún registro tiene validez legal"
+  },
+  "roles": {
+    "employee": "Trabajador/a",
+    "coordinator": "Coordinación",
+    "admin": "Administración",
+    "auditor": "Auditoría",
+    "none": "Sin rol"
+  },
+  "nav": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "clock": "Fichar",
+    "history": "Historial",
+    "events": "Eventos",
+    "correction": "Solicitar corrección",
+    "adminHome": "Panel",
+    "employees": "Plantilla",
+    "adminEvents": "Eventos",
+    "incidents": "Incidencias",
+    "goAdmin": "Ir al panel de gestión →",
+    "goWorker": "← Volver a mi fichaje"
+  },
+  "auth": {
+    "signOut": "Salir",
+    "errors": {
+      "invalid-credentials": "Correo o contraseña incorrectos.",
+      "too-many-requests": "Demasiados intentos. Espera un momento y vuelve a intentarlo.",
+      "network": "Error de conexión. Comprueba tu conexión a internet.",
+      "unknown": "No se ha podido iniciar sesión."
+    }
+  },
+  "login": {
+    "subtitle": "Registro horario de Arima Cool Tour",
+    "title": "Iniciar sesión",
+    "demoTitle": "Modo demostración",
+    "demoHelp": "Elige un perfil ficticio para probar la aplicación. No se necesita contraseña y no se guarda nada.",
+    "demoAs": "Entrar con el perfil: {{role}}",
+    "emulatorHint": "Emuladores locales: usa las cuentas ficticias creadas con «npm run emulators:seed».",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "submit": "Entrar",
+    "individualAccounts": "Cada persona tiene su propia cuenta. No compartas tu contraseña.",
+    "privacy": "No se usa la ubicación GPS ni hay seguimiento continuo."
+  },
+  "noRole": {
+    "title": "Tu cuenta no tiene un rol asignado",
+    "body": "Contacta con administración para activar el acceso."
+  },
+  "forbidden": {
+    "title": "Acceso no permitido",
+    "body": "No tienes permiso para ver esta página."
+  },
+  "notFound": { "title": "Página no encontrada" },
+  "dashboard": {
+    "greeting": "Hola, {{name}}",
+    "statusTitle": "Estado actual",
+    "goClock": "Fichar",
+    "week": "Últimos 7 días",
+    "issues": "Por revisar",
+    "upcoming": "Próximos eventos",
+    "allEvents": "Ver todos mis eventos"
+  },
+  "clock": {
+    "title": "Fichar",
+    "simulationTitle": "SIMULACIÓN — no se registra ninguna hora",
+    "simulationBody": "Fase 1: los botones solo muestran el flujo previsto. No se envía ni se guarda nada y no tiene validez legal. El fichaje real se activará en la fase 2, con la hora del servidor.",
+    "simulationShort": "Simulación",
+    "timeSourceServer": "Hora del servidor (Europe/Madrid)",
+    "timeSourceDevice": "Hora del dispositivo (demostración; los fichajes reales usarán la hora del servidor)",
+    "currentStatus": "Estado",
+    "status": {
+      "off": "Fuera de jornada",
+      "working": "Trabajando",
+      "on-break": "En pausa"
+    },
+    "eventLabel": "Evento (opcional)",
+    "noEvent": "Sin evento",
+    "noEventHelp": "Puedes fichar aunque no tengas un evento asignado.",
+    "actions": {
+      "clock-in": "Entrada",
+      "clock-out": "Salida",
+      "break-start": "Iniciar pausa",
+      "break-end": "Terminar pausa"
+    },
+    "simulatedDone": "Simulado: {{action}}. No se ha registrado nada.",
+    "invalidTransition": "Esa acción no está permitida en el estado actual.",
+    "simulatedLog": "Registro de la simulación (solo en este dispositivo)",
+    "deviceTime": "dispositivo",
+    "resetSimulation": "Reiniciar simulación",
+    "confirmTitle": "¿Simular «{{action}}»?",
+    "confirmBody": "Esto es una simulación. No se enviará ni registrará ninguna hora.",
+    "confirmSimulate": "Simular"
+  },
+  "history": {
+    "title": "Historial",
+    "subtitle": "Tus jornadas (hora de Europe/Madrid)",
+    "empty": "No hay registros.",
+    "noEvent": "Sin evento",
+    "breaks": "Pausas",
+    "corrected": "Corregido",
+    "anomalies": {
+      "missing-clock-out": "Falta la salida",
+      "break-not-closed": "Pausa sin cerrar",
+      "orphan-punch": "Marca suelta",
+      "non-monotonic-time": "Hora fuera de orden"
+    },
+    "requestCorrection": "Solicitar corrección",
+    "myCorrections": "Mis solicitudes de corrección"
+  },
+  "correction": {
+    "title": "Solicitar corrección",
+    "subtitle": "El registro original nunca se modifica: la corrección también queda registrada.",
+    "notSent": "Fase 1: el formulario se valida, pero NO se envía.",
+    "kindLabel": "¿Qué hay que corregir?",
+    "kinds": {
+      "add-missing": "Falta una marca",
+      "adjust-time": "La hora de una marca es incorrecta",
+      "void-entry": "Una marca no debió hacerse"
+    },
+    "punchLabel": "Tipo de marca",
+    "date": "Fecha",
+    "time": "Hora",
+    "timezoneHelp": "Introduce la hora oficial peninsular (zona Europe/Madrid).",
+    "reason": "Motivo",
+    "submit": "Comprobar solicitud",
+    "originalKept": "Administración la revisará. Se conservarán tanto la marca original como la corrección.",
+    "simulatedSent": "El formulario es correcto. En la fase 1 no se envía.",
+    "status": {
+      "pending": "Pendiente",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "withdrawn": "Retirada"
+    },
+    "errors": {
+      "nonexistent": "Esa hora no existe (cambio de hora).",
+      "ambiguous": "Esa hora ocurre dos veces (cambio de hora). Indícalo en el motivo.",
+      "time": "Introduce una hora válida.",
+      "generic": "Revisa los datos.",
+      "reason": "El motivo debe tener al menos {{min}} caracteres."
+    }
+  },
+  "events": {
+    "none": "No tienes eventos asignados.",
+    "mineTitle": "Mis eventos",
+    "mineSubtitle": "Eventos y actividades asignados",
+    "task": "Tarea",
+    "status": {
+      "draft": "Borrador",
+      "scheduled": "Programado",
+      "in-progress": "En curso",
+      "finished": "Finalizado",
+      "cancelled": "Cancelado"
+    },
+    "assignment": {
+      "assigned": "Asignado",
+      "confirmed": "Confirmado",
+      "declined": "Rechazado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "admin": {
+    "title": "Panel de gestión",
+    "subtitle": "Resumen general",
+    "stats": {
+      "employees": "Plantilla activa",
+      "events": "Próximos eventos",
+      "incidents": "Incidencias abiertas",
+      "corrections": "Correcciones pendientes"
+    },
+    "rulesTitle": "Reglas de jornada",
+    "rulesHelp_one": "{{count}} aviso en los datos ficticios. Las reglas están pendientes de revisión legal: son avisos, no sanciones.",
+    "rulesHelp_other": "{{count}} avisos en los datos ficticios. Las reglas están pendientes de revisión legal: son avisos, no sanciones.",
+    "rulesEditPhase2": "Las reglas se podrán editar en la fase 2, con auditoría."
+  },
+  "rules": {
+    "codes": {
+      "MAX_DAILY_ORDINARY_HOURS": "Máximo de horas ordinarias diarias",
+      "MIN_REST_BETWEEN_WORKDAYS": "Descanso mínimo entre jornadas",
+      "BREAK_AFTER_CONTINUOUS_WORK": "Pausa en jornada continuada",
+      "MIN_WEEKLY_REST": "Descanso semanal mínimo",
+      "MAX_WEEKLY_AVERAGE_HOURS": "Máximo de horas semanales de promedio"
+    },
+    "status": {
+      "draft": "Borrador",
+      "pending-legal-review": "Pendiente de revisión legal",
+      "active": "Activa",
+      "retired": "Retirada"
+    },
+    "findings": {
+      "maxDaily": "Se han trabajado {{minutes}} min (límite: {{limit}} min)",
+      "minRest": "{{minutes}} min de descanso (mínimo: {{limit}} min)",
+      "breakMissing": "{{minutes}} min seguidos sin pausa (límite: {{limit}} min)"
+    }
+  },
+  "employees": {
+    "title": "Plantilla",
+    "subtitle": "Personas trabajadoras (datos ficticios)",
+    "add": "Añadir persona",
+    "status": { "active": "Activa", "inactive": "Inactiva" },
+    "privacyNote": "En desarrollo no se usan datos reales. En la fase 1 no se guardan DNI ni domicilios."
+  },
+  "adminEvents": {
+    "title": "Gestión de eventos",
+    "subtitle": "Eventos y asignaciones",
+    "add": "Crear evento",
+    "staff_one": "{{count}} persona asignada",
+    "staff_other": "{{count}} personas asignadas"
+  },
+  "incidents": {
+    "title": "Incidencias",
+    "subtitle": "Avisos para revisión humana",
+    "empty": "No hay incidencias.",
+    "types": {
+      "missing-clock-out": "Salida sin fichar",
+      "rest-period-not-met": "Descanso no cumplido",
+      "max-daily-hours-exceeded": "Horas diarias superadas",
+      "break-not-taken": "Sin pausa",
+      "clock-in-without-assignment": "Fichaje sin asignación",
+      "clock-device-time-skew": "Hora del dispositivo desajustada",
+      "correction-requested": "Corrección solicitada",
+      "other": "Otra"
+    },
+    "severity": { "info": "Información", "warning": "Aviso", "critical": "Grave" },
+    "status": { "open": "Abierta", "acknowledged": "Vista", "resolved": "Resuelta" },
+    "noAutoSanction": "Las incidencias no bloquean fichajes ni generan sanciones automáticas: debe revisarlas una persona."
+  }
+}
